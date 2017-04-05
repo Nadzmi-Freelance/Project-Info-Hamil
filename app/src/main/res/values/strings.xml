@@ -1,0 +1,332 @@
+<resources>
+    <string name="app_name">Info Hamil</string>
+
+    <!-- tajuk -->
+    <string name="tajuk_info_hamil">Info Hamil</string>
+    <string name="tajuk_info_bayi">Info Bayi</string>
+    <string name="tajuk_info_ibu">Info Ibu</string>
+    <string name="tajuk_footer">Copyright \u00a9 2017 Onepage Media Networks</string>
+
+    <!-- nav -->
+    <string name="nav_minggu_sebelum">Minggu Sebelum</string>
+    <string name="nav_minggu_berikut">Minggu Berikut</string>
+    <string name="nav_tip_sebelum">Tip Sebelum</string>
+    <string name="nav_tip_berikut">Tip Berikut</string>
+
+    <!-- menu -->
+    <string-array name="menu_utama">
+        <item>Tanda-Tanda Anda Hamil</item>
+        <item>Kira Tarikh Kelahiran Bayi</item>
+        <item>Info Minggu Kehamilan</item>
+        <item>Tips Penjagaan Ibu Hamil</item>
+        <item>Tips Penjagaan Bayi</item>
+    </string-array>
+
+    <string-array name="menu_setting">
+        <item>Home</item>
+        <item>About Us</item>
+        <item>Copyright &amp; Disclaimer</item>
+    </string-array>
+
+    <string-array name="menu_share">
+        <item>Whatsapp</item>
+        <item>Email</item>
+    </string-array>
+
+    <string-array name="menu_info_minggu_kehamil">
+        <item>Minggu Ke-1 Kehamilan</item>
+        <item>Minggu Ke-2 Kehamilan</item>
+        <item>Minggu Ke-3 Kehamilan</item>
+        <item>Minggu Ke-4 Kehamilan</item>
+        <item>Minggu Ke-5 Kehamilan</item>
+        <item>Minggu Ke-6 Kehamilan</item>
+        <item>Minggu Ke-7 Kehamilan</item>
+        <item>Minggu Ke-8 Kehamilan</item>
+        <item>Minggu Ke-9 Kehamilan</item>
+        <item>Minggu Ke-10 Kehamilan</item>
+
+        <item>Minggu Ke-11 Kehamilan</item>
+        <item>Minggu Ke-12 Kehamilan</item>
+        <item>Minggu Ke-13 Kehamilan</item>
+        <item>Minggu Ke-14 Kehamilan</item>
+        <item>Minggu Ke-15 Kehamilan</item>
+        <item>Minggu Ke-16 Kehamilan</item>
+        <item>Minggu Ke-17 Kehamilan</item>
+        <item>Minggu Ke-18 Kehamilan</item>
+        <item>Minggu Ke-19 Kehamilan</item>
+        <item>Minggu Ke-20 Kehamilan</item>
+
+        <item>Minggu Ke-21 Kehamilan</item>
+        <item>Minggu Ke-22 Kehamilan</item>
+        <item>Minggu Ke-23 Kehamilan</item>
+        <item>Minggu Ke-24 Kehamilan</item>
+        <item>Minggu Ke-25 Kehamilan</item>
+        <item>Minggu Ke-26 Kehamilan</item>
+        <item>Minggu Ke-27 Kehamilan</item>
+        <item>Minggu Ke-28 Kehamilan</item>
+        <item>Minggu Ke-29 Kehamilan</item>
+        <item>Minggu Ke-30 Kehamilan</item>
+
+        <item>Minggu Ke-31 Kehamilan</item>
+        <item>Minggu Ke-32 Kehamilan</item>
+        <item>Minggu Ke-33 Kehamilan</item>
+        <item>Minggu Ke-34 Kehamilan</item>
+        <item>Minggu Ke-35 Kehamilan</item>
+        <item>Minggu Ke-36 Kehamilan</item>
+        <item>Minggu Ke-37 Kehamilan</item>
+        <item>Minggu Ke-38 Kehamilan</item>
+        <item>Minggu Ke-39 Kehamilan</item>
+        <item>Minggu Ke-40 Kehamilan</item>
+
+        <item>Minggu Ke-41 Kehamilan</item>
+        <item>Minggu Ke-42 Kehamilan</item>
+    </string-array>
+
+    <string-array name="menu_tip">
+        <item>Tip 1</item>
+        <item>Tip 2</item>
+        <item>Tip 3</item>
+        <item>Tip 4</item>
+        <item>Tip 5</item>
+        <item>Tip 6</item>
+        <item>Tip 7</item>
+        <item>Tip 8</item>
+        <item>Tip 9</item>
+        <item>Tip 10</item>
+    </string-array>
+
+    <!-- desc -->
+    <!-- hint
+        <string-array>
+            <item> [image] </item>
+            <item> [info ibu] </item>
+            <item> [info bayi] </item>
+        </string-array>
+    -->
+    <!-- 1-10 -->
+    <string-array name="desc_minggu_1">
+        <item>@drawable/w1</item>
+        <item>
+            Semasa minggu pertama baru terjadi proses pembentukan antara sperma dan sel telur. Janin sudah memiliki genetik
+            46 jenis kromosom. Pasa masa ini embrio memerlukan nutrisi dalam bentuk oksigen dari ibu.
+        </item>
+        <item>
+            Tiada tanda-tanda yang ketara dirasakan oleh ibu pada masa ini walaupun tarikh kedatangan haid telahpun lewat
+            daripada biasa.
+        </item>
+    </string-array>
+    <string-array name="desc_minggu_2">
+        <item>@drawable/w2</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_3">
+        <item>@drawable/w3</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_4">
+        <item>@drawable/w4</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_5">
+        <item>@drawable/w5</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_6">
+        <item>@drawable/w6</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_7">
+        <item>@drawable/w7</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_8">
+        <item>@drawable/w8</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_9">
+        <item>@drawable/w9</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_10">
+        <item>@drawable/w10</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <!-- 11-20 -->
+    <string-array name="desc_minggu_11">
+        <item>@drawable/w11</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_12">
+        <item>@drawable/w12</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_13">
+        <item>@drawable/w13</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_14">
+        <item>@drawable/w14</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_15">
+        <item>@drawable/w15</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_16">
+        <item>@drawable/w16</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_17">
+        <item>@drawable/w17</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_18">
+        <item>@drawable/w18</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_19">
+        <item>@drawable/w19</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_20">
+        <item>@drawable/w20</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <!-- 21-30 -->
+    <string-array name="desc_minggu_21">
+        <item>@drawable/w21</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_22">
+        <item>@drawable/w22</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_23">
+        <item>@drawable/w23</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_24">
+        <item>@drawable/w24</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_25">
+        <item>@drawable/w25</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_26">
+        <item>@drawable/w26</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_27">
+        <item>@drawable/w27</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_28">
+        <item>@drawable/w28</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_29">
+        <item>@drawable/w29</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_30">
+        <item>@drawable/w30</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <!-- 31-40 -->
+    <string-array name="desc_minggu_31">
+        <item>@drawable/w31</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_32">
+        <item>@drawable/w32</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_33">
+        <item>@drawable/w33</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_34">
+        <item>@drawable/w34</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_35">
+        <item>@drawable/w35</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_36">
+        <item>@drawable/w36</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_37">
+        <item>@drawable/w37</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_38">
+        <item>@drawable/w38</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_39">
+        <item>@drawable/w39</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_40">
+        <item>@drawable/w40</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <!-- 41-42 -->
+    <string-array name="desc_minggu_41">
+        <item>@drawable/w41</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc_minggu_42">
+        <item>@drawable/w42</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string name="title_activity_minggu_hamil">MingguHamil</string>
+</resources>
