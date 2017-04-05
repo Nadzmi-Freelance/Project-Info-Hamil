@@ -66,7 +66,6 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
                 }
                 break;
             case R.id.lvMingguHamil:
-                // TODO: 4/5/2017 - implement link untuk setiap tanda
                 Intent nextAct;
 
                 nextAct = new Intent(this, InfoMingguHamil.class);

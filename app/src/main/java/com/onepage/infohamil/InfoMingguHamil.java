@@ -45,7 +45,6 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
 
     // setup methods
     private void setup() {
-        // TODO: 4/5/2017 - Ubah yg ni, bagi dia dynamically fetch data ikut menu yg user pilih dkt MingguHamil.class
         Bundle prevAct;
         int position;
         TypedArray imgList;
