@@ -1,5 +1,6 @@
 package com.onepage.infohamil;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class TandaHamil extends AppCompatActivity implements AdapterView.OnItemC
     // setup methods
     private void setup() {
         // TODO: 4/5/2017 - update UI listview
-        tandaMenu = getResources().getStringArray(R.array.menu_tip); // TODO: 4/5/2017 - tukar kepada menu tanda-tanda
+        tandaMenu = getResources().getStringArray(R.array.menu_tanda_hamil);
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
 

@@ -28,8 +28,9 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
     TextView tvDescBayi, tvDescIbu;
     ImageView ivGambarInfo;
 
-    private String[] settingMenu, infoMinggu;
-    private TypedArray idGambar;
+    private String[] settingMenu;
+    private String descIbu, descBayi;
+    private int descImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +45,18 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
 
     // setup methods
     private void setup() {
-        // TODO: 4/5/2017 - Ubah yg ni, bagi dia dynamically fetch data ikut menu yg user pilih dkt MingguHamil.class 
-        idGambar = getResources().obtainTypedArray(R.array.desc_minggu_1);
-        infoMinggu = getResources().getStringArray(R.array.desc_minggu_1);
+        // TODO: 4/5/2017 - Ubah yg ni, bagi dia dynamically fetch data ikut menu yg user pilih dkt MingguHamil.class
+        Bundle prevAct;
+        int position;
+        TypedArray imgList;
+
+        prevAct = getIntent().getExtras();
+
+        position = prevAct.getInt("mingguPos");
+        imgList = getResources().obtainTypedArray(R.array.desc_img_minggu_hamil);
+        descIbu = getResources().getStringArray(R.array.desc_ibu_minggu_hamil)[position];
+        descBayi = getResources().getStringArray(R.array.desc_bayi_minggu_hamil)[position];
+        descImg = imgList.getResourceId(position, -1);
 
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
@@ -62,9 +72,9 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
 
         lvSettingMenu.setAdapter(new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, settingMenu));
 
-        ivGambarInfo.setImageResource(idGambar.getResourceId(0, -1));
-        tvDescIbu.setText(infoMinggu[1]);
-        tvDescBayi.setText(infoMinggu[2]);
+        ivGambarInfo.setImageResource(descImg);
+        tvDescIbu.setText(descIbu);
+        tvDescBayi.setText(descBayi);
     }
 
     private void setupListener() {
@@ -101,5 +111,10 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
             case R.id.llMingguBerikut:
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

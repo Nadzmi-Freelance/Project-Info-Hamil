@@ -87,4 +87,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }
