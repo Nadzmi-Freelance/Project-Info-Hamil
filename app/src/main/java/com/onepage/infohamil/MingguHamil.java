@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.onepage.infohamil.custom_ui.CustomListViewAdapter;
+
 // TODO: 4/5/2017 - update UI
 // TODO: 4/5/2017 - implement custom ActionBar
 public class MingguHamil extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -37,6 +39,12 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
     }
 
     private void setupViews() {
+        /*
+        CustomListViewAdapter listViewAdapter;
+
+        listViewAdapter = new CustomListViewAdapter(this, mingguHamil);
+        */
+
         dlMain = (DrawerLayout) findViewById(R.id.dlMain);
         lvSettingMenu = (ListView) findViewById(R.id.lvSettingMenu);
         lvMingguHamil = (ListView) findViewById(R.id.lvMingguHamil);

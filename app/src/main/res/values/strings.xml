@@ -83,7 +83,20 @@
         <item>Minggu Ke-42 Kehamilan</item>
     </string-array>
 
-    <string-array name="menu_tip">
+    <string-array name="menu_tip_ibu">
+        <item>Tip 1</item>
+        <item>Tip 2</item>
+        <item>Tip 3</item>
+        <item>Tip 4</item>
+        <item>Tip 5</item>
+        <item>Tip 6</item>
+        <item>Tip 7</item>
+        <item>Tip 8</item>
+        <item>Tip 9</item>
+        <item>Tip 10</item>
+    </string-array>
+
+    <string-array name="menu_tip_bayi">
         <item>Tip 1</item>
         <item>Tip 2</item>
         <item>Tip 3</item>

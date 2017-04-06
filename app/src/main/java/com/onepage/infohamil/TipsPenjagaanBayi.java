@@ -1,5 +1,6 @@
 package com.onepage.infohamil;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class TipsPenjagaanBayi extends AppCompatActivity implements AdapterView.
 
     // setup methods
     private void setup() {
-        tipMenu = getResources().getStringArray(R.array.menu_tip);
+        tipMenu = getResources().getStringArray(R.array.menu_tip_bayi);
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
 

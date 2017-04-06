@@ -30,7 +30,7 @@ public class TipsPenjagaanIbu extends AppCompatActivity implements AdapterView.O
 
     // setup methods
     private void setup() {
-        tipMenu = getResources().getStringArray(R.array.menu_tip);
+        tipMenu = getResources().getStringArray(R.array.menu_tip_ibu);
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
 
