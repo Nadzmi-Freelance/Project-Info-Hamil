@@ -1,23 +1,30 @@
 package com.onepage.infohamil;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 // TODO: 4/5/2017 - update UI
 // TODO: 4/5/2017 - implement custom ActionBar
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     DrawerLayout dlMain;
     ListView lvSettingMenu, lvMainMenu;
+    TextView tvActTitle; // actionbar title
 
     private String[] settingMenu, mainMenu;
 
@@ -38,7 +45,42 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
 
+    private void setupActionBar() {
+        ActionBar actionBar;
+        LayoutInflater layoutInflater;
+        View customActionbar;
+        ImageButton ibMenu, ibShare;
+
+        actionBar = getSupportActionBar();
+        layoutInflater = LayoutInflater.from(this);
+        customActionbar = layoutInflater.inflate(R.layout.actionbar_custom, null);
+
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setCustomView(customActionbar);
+        actionBar.setDisplayShowCustomEnabled(true);
+
+        ibMenu = (ImageButton) findViewById(R.id.ibMenu);
+        ibShare = (ImageButton) findViewById(R.id.ibShare);
+        tvActTitle = (TextView) findViewById(R.id.tvActTitle);
+
+        ibShare.setVisibility(View.INVISIBLE);
+        tvActTitle.setText(R.string.app_name);
+
+        ibMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dlMain.isDrawerVisible(GravityCompat.START))
+                    dlMain.closeDrawer(GravityCompat.START);
+                else
+                    dlMain.openDrawer(GravityCompat.START);
+            }
+        });
+    }
+
     private void setupViews() {
+        setupActionBar();
+
         dlMain = (DrawerLayout) findViewById(R.id.dlMain);
         lvMainMenu = (ListView) findViewById(R.id.lvMainMenu);
         lvSettingMenu = (ListView) findViewById(R.id.lvSettingMenu);

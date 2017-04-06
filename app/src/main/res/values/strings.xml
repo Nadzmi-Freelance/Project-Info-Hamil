@@ -6,6 +6,11 @@
     <string name="tajuk_info_bayi">Info Bayi</string>
     <string name="tajuk_info_ibu">Info Ibu</string>
     <string name="tajuk_footer">Copyright \u00a9 2017 Onepage Media Networks</string>
+    <string name="tajuk_act_tanda_hamil">Tanda-Tanda Anda Hamil</string>
+    <string name="tajuk_act_kira_tarikh_kelahiran">Kira Tarikh Kelahiran Bayi</string>
+    <string name="tajuk_act_info_minggu_hamil">Info Minggu Kehamilan</string>
+    <string name="tajuk_act_tip_penjagaan_ibu">Tips Penjagaan Ibu Hamil</string>
+    <string name="tajuk_act_tip_penjagaan_bayi">Tips Penjagaan Bayi</string>
     <string name="title_activity_minggu_hamil">MingguHamil</string>
 
     <!-- nav -->
