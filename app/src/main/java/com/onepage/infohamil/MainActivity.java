@@ -101,6 +101,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.lvSettingMenu:
                 switch (position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;

@@ -95,6 +95,8 @@ public class TipsPenjagaanBayi extends AppCompatActivity implements AdapterView.
             case R.id.lvSettingMenu:
                 switch (position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;
@@ -107,5 +109,10 @@ public class TipsPenjagaanBayi extends AppCompatActivity implements AdapterView.
                 // TODO: 4/5/2017 - implement link utk setiap tips
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

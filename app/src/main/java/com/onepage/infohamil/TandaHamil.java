@@ -96,6 +96,8 @@ public class TandaHamil extends AppCompatActivity implements AdapterView.OnItemC
             case R.id.lvSettingMenu:
                 switch (position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;
@@ -107,5 +109,10 @@ public class TandaHamil extends AppCompatActivity implements AdapterView.OnItemC
             case R.id.lvTanda: // TODO: 4/5/2017 - implement link untuk setiap tanda
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

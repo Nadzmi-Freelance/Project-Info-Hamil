@@ -157,6 +157,8 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
             case R.id.lvSettingMenu:
                 switch (position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;

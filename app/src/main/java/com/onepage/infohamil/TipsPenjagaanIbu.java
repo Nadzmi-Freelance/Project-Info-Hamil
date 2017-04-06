@@ -95,6 +95,8 @@ public class TipsPenjagaanIbu extends AppCompatActivity implements AdapterView.O
             case R.id.lvSettingMenu:
                 switch (position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;
@@ -107,5 +109,10 @@ public class TipsPenjagaanIbu extends AppCompatActivity implements AdapterView.O
                 // TODO: 4/5/2017 - Implement link utk semua tips
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

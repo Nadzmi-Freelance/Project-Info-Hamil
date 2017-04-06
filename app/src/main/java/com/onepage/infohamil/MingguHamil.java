@@ -33,6 +33,7 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
 
         // call setup methods
         setup();
+        setupActionBar();
         setupViews();
         setupListener();
     }
@@ -68,17 +69,16 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
         ibMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dlMain.isDrawerVisible(GravityCompat.START))
-                    dlMain.closeDrawer(GravityCompat.START);
-                else
-                    dlMain.openDrawer(GravityCompat.START);
+                if(dlMain != null)
+                    if (dlMain.isDrawerVisible(GravityCompat.START))
+                        dlMain.closeDrawer(GravityCompat.START);
+                    else
+                        dlMain.openDrawer(GravityCompat.START);
             }
         });
     }
 
     private void setupViews() {
-        setupActionBar();
-
         /*
         CustomListViewAdapter listViewAdapter;
 
@@ -106,6 +106,8 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
             case R.id.lvSettingMenu:
                 switch(position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;
