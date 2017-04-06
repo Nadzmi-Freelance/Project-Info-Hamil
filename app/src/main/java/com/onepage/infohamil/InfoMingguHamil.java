@@ -41,6 +41,7 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
     private int descImg;
 
     String title; // for actionbar
+    int position; // current minggu
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,6 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
     private void setup() {
         Bundle prevAct;
         TypedArray imgList;
-        int position;
 
         prevAct = getIntent().getExtras();
 
@@ -171,12 +171,27 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
     // TODO: 4/5/2017 - implement '->' link & '<-' link
     @Override
     public void onClick(View v) {
+        Intent otherAct;
+
+        otherAct = new Intent(this, InfoMingguHamil.class);
         switch(v.getId()) {
             case R.id.llMingguSebelum:
+                position -= 1;
                 break;
             case R.id.llMingguBerikut:
+                position += 1;
                 break;
         }
+
+        if(position <= 0)
+            position = 0;
+        else if(position > getResources().getStringArray(R.array.menu_info_minggu_kehamil).length - 1)
+            position = getResources().getStringArray(R.array.menu_info_minggu_kehamil).length - 1;
+
+        otherAct.putExtra("title", getResources().getStringArray(R.array.menu_info_minggu_kehamil)[position]);
+        otherAct.putExtra("mingguPos", position);
+        startActivity(otherAct);
+        finish();
     }
 
     @Override

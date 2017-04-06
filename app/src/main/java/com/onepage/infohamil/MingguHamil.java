@@ -77,13 +77,13 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
     }
 
     private void setupViews() {
+        setupActionBar();
+
         /*
         CustomListViewAdapter listViewAdapter;
 
         listViewAdapter = new CustomListViewAdapter(this, mingguHamil);
         */
-
-        setupActionBar();
 
         dlMain = (DrawerLayout) findViewById(R.id.dlMain);
         lvSettingMenu = (ListView) findViewById(R.id.lvSettingMenu);
