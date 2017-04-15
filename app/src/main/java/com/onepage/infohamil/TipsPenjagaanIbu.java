@@ -14,7 +14,9 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-// TODO: 4/5/2017 - update UI
+import com.onepage.infohamil.adapter.ListViewMenuAdapter;
+
+
 public class TipsPenjagaanIbu extends AppCompatActivity implements AdapterView.OnItemClickListener {
     DrawerLayout dlMain;
     ListView lvSettingMenu, lvTip;
@@ -73,14 +75,18 @@ public class TipsPenjagaanIbu extends AppCompatActivity implements AdapterView.O
     }
 
     private void setupViews() {
+        ListViewMenuAdapter menuAdapter;
+
         setupActionBar();
+
+        menuAdapter = new ListViewMenuAdapter(this, tipMenu);
 
         dlMain = (DrawerLayout) findViewById(R.id.dlMain);
         lvSettingMenu = (ListView) findViewById(R.id.lvSettingMenu);
-        lvTip = (ListView) findViewById(R.id.lvTip); // TODO: 4/5/2017 - update UI utk ListView
+        lvTip = (ListView) findViewById(R.id.lvTip);
 
         lvSettingMenu.setAdapter(new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, settingMenu));
-        lvTip.setAdapter(new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, tipMenu));
+        lvTip.setAdapter(menuAdapter);
     }
 
     private void setupListener() {

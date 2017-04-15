@@ -14,7 +14,9 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-// TODO: 4/5/2017 - update UI
+import com.onepage.infohamil.adapter.ListViewMenuAdapter;
+
+
 public class TandaHamil extends AppCompatActivity implements AdapterView.OnItemClickListener {
     DrawerLayout dlMain;
     ListView lvSettingMenu, lvTanda;
@@ -35,7 +37,6 @@ public class TandaHamil extends AppCompatActivity implements AdapterView.OnItemC
 
     // setup methods
     private void setup() {
-        // TODO: 4/5/2017 - update UI listview
         tandaMenu = getResources().getStringArray(R.array.menu_tanda_hamil);
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
@@ -74,14 +75,18 @@ public class TandaHamil extends AppCompatActivity implements AdapterView.OnItemC
     }
 
     private void setupViews() {
+        ListViewMenuAdapter menuAdapter;
+
         setupActionBar();
+
+        menuAdapter = new ListViewMenuAdapter(this, tandaMenu);
 
         dlMain = (DrawerLayout) findViewById(R.id.dlMain);
         lvSettingMenu = (ListView) findViewById(R.id.lvSettingMenu);
         lvTanda = (ListView) findViewById(R.id.lvTanda);
 
         lvSettingMenu.setAdapter(new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, settingMenu));
-        lvTanda.setAdapter(new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, tandaMenu));
+        lvTanda.setAdapter(menuAdapter);
     }
 
     private void setupListener() {
