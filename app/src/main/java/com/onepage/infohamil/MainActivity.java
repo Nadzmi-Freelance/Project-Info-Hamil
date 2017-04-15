@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-// TODO: 4/5/2017 - update UI
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     DrawerLayout dlMain;
     ListView lvSettingMenu, lvMainMenu;

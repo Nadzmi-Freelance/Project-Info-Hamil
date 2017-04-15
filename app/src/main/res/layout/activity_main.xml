@@ -16,7 +16,12 @@
             android:id="@+id/lvMainMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/draw_main_menu_bg"/>
 
         <TextView
             android:id="@+id/tvFooter"

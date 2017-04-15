@@ -37,7 +37,7 @@ public class MingguHamil extends AppCompatActivity implements AdapterView.OnItem
 
     // setup methods
     private void setup() {
-        mingguHamil = getResources().getStringArray(R.array.menu_info_minggu_kehamil); // TODO: 4/5/2017 - update UI list view
+        mingguHamil = getResources().getStringArray(R.array.menu_info_minggu_kehamil);
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
 

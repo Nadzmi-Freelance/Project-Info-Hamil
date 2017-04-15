@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-// TODO: 4/5/2017 - update UI
+
 public class InfoMingguHamil extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
     DrawerLayout dlMain;
     ListView lvSettingMenu;
