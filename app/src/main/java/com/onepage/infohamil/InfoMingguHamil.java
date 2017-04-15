@@ -2,34 +2,36 @@ package com.onepage.infohamil;
 
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.support.annotation.IntegerRes;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import static com.onepage.infohamil.R.id.info;
-import static com.onepage.infohamil.R.id.lvMainMenu;
-import static com.onepage.infohamil.R.id.lvSettingMenu;
-
 // TODO: 4/5/2017 - update UI
-// TODO: 4/5/2017 - implement custom ActionBar
 public class InfoMingguHamil extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
     DrawerLayout dlMain;
     ListView lvSettingMenu;
     LinearLayout llMingguSebelum, llMingguBerikut;
     TextView tvDescBayi, tvDescIbu;
+    TextView tvActTitle; // actionbar title
     ImageView ivGambarInfo;
 
-    private String[] settingMenu, infoMinggu;
-    private TypedArray idGambar;
+    private String[] settingMenu;
+    private String descIbu, descBayi;
+    private int descImg;
+
+    String title; // for actionbar
+    int position; // current minggu
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +46,78 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
 
     // setup methods
     private void setup() {
-        // TODO: 4/5/2017 - Ubah yg ni, bagi dia dynamically fetch data ikut menu yg user pilih dkt MingguHamil.class 
-        idGambar = getResources().obtainTypedArray(R.array.desc_minggu_1);
-        infoMinggu = getResources().getStringArray(R.array.desc_minggu_1);
+        Bundle prevAct;
+        TypedArray imgList;
+
+        prevAct = getIntent().getExtras();
+
+        position = prevAct.getInt("mingguPos");
+        title = prevAct.getString("title");
+
+        imgList = getResources().obtainTypedArray(R.array.desc_img_minggu_hamil);
+        descIbu = getResources().getStringArray(R.array.desc_ibu_minggu_hamil)[position];
+        descBayi = getResources().getStringArray(R.array.desc_bayi_minggu_hamil)[position];
+        descImg = imgList.getResourceId(position, -1);
 
         settingMenu = getResources().getStringArray(R.array.menu_setting);
     }
 
+    private void setupActionBar() {
+        ActionBar actionBar;
+        LayoutInflater layoutInflater;
+        View customActionbar;
+        ImageButton ibMenu, ibShare;
+
+        actionBar = getSupportActionBar();
+        layoutInflater = LayoutInflater.from(this);
+        customActionbar = layoutInflater.inflate(R.layout.actionbar_custom, null);
+
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setCustomView(customActionbar);
+        actionBar.setDisplayShowCustomEnabled(true);
+
+        ibMenu = (ImageButton) findViewById(R.id.ibMenu);
+        ibShare = (ImageButton) findViewById(R.id.ibShare);
+        tvActTitle = (TextView) findViewById(R.id.tvActTitle);
+
+        tvActTitle.setText(title);
+
+        ibMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dlMain.isDrawerVisible(GravityCompat.START))
+                    dlMain.closeDrawer(GravityCompat.START);
+                else
+                    dlMain.openDrawer(GravityCompat.START);
+            }
+        });
+
+        ibShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String shareContent;
+                Intent shareIntent;
+
+                shareIntent = new Intent();
+
+                shareContent = title + "\n\n" +
+                        "Info Ibu:\n" + descIbu + "\n\n" +
+                        "Info Bayi:\n" + descBayi + "\n\n" +
+                        "-- From Info Hamil (Test) --";
+
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareContent);
+                shareIntent.setType("text/plain");
+
+                startActivity(Intent.createChooser(shareIntent, "Share info to..."));
+            }
+        });
+    }
+
     private void setupViews() {
+        setupActionBar();
+
         dlMain = (DrawerLayout) findViewById(R.id.dlMain);
         lvSettingMenu = (ListView) findViewById(R.id.lvSettingMenu);
         llMingguSebelum = (LinearLayout) findViewById(R.id.llMingguSebelum);
@@ -62,9 +128,9 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
 
         lvSettingMenu.setAdapter(new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, settingMenu));
 
-        ivGambarInfo.setImageResource(idGambar.getResourceId(0, -1));
-        tvDescIbu.setText(infoMinggu[1]);
-        tvDescBayi.setText(infoMinggu[2]);
+        ivGambarInfo.setImageResource(descImg);
+        tvDescIbu.setText(descIbu);
+        tvDescBayi.setText(descBayi);
     }
 
     private void setupListener() {
@@ -81,6 +147,8 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
             case R.id.lvSettingMenu:
                 switch (position) {
                     case 0:
+                        finish();
+                        startActivity(new Intent(this, MainActivity.class));
                         break;
                     case 1:
                         break;
@@ -92,14 +160,33 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
         }
     }
 
-    // TODO: 4/5/2017 - implement '->' link & '<-' link
     @Override
     public void onClick(View v) {
+        Intent otherAct;
+
+        otherAct = new Intent(this, InfoMingguHamil.class);
         switch(v.getId()) {
             case R.id.llMingguSebelum:
+                position -= 1;
                 break;
             case R.id.llMingguBerikut:
+                position += 1;
                 break;
         }
+
+        if(position <= 0)
+            position = 0;
+        else if(position > getResources().getStringArray(R.array.menu_info_minggu_kehamil).length - 1)
+            position = getResources().getStringArray(R.array.menu_info_minggu_kehamil).length - 1;
+
+        otherAct.putExtra("title", getResources().getStringArray(R.array.menu_info_minggu_kehamil)[position]);
+        otherAct.putExtra("mingguPos", position);
+        startActivity(otherAct);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }
