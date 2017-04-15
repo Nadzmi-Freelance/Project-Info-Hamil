@@ -1,12 +1,11 @@
 package com.onepage.infohamil;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
+import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,8 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.onepage.infohamil.custom_ui.CustomListViewAdapter;
 
 // TODO: 4/5/2017 - update UI
 public class MingguHamil extends AppCompatActivity implements AdapterView.OnItemClickListener {

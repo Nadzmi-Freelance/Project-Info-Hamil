@@ -11,6 +11,7 @@
     <string name="tajuk_act_info_minggu_hamil">Info Minggu Kehamilan</string>
     <string name="tajuk_act_tip_penjagaan_ibu">Tips Penjagaan Ibu Hamil</string>
     <string name="tajuk_act_tip_penjagaan_bayi">Tips Penjagaan Bayi</string>
+    <string name="tajuk_act_senarai_hospital_bersalin">Senarai Hospital Bersalin</string>
     <string name="title_activity_minggu_hamil">MingguHamil</string>
 
     <!-- nav -->
@@ -26,6 +27,7 @@
         <item>Info Minggu Kehamilan</item>
         <item>Tips Penjagaan Ibu Hamil</item>
         <item>Tips Penjagaan Bayi</item>
+        <item>Senarai Hospital Bersalin</item>
     </string-array>
 
     <string-array name="menu_setting">

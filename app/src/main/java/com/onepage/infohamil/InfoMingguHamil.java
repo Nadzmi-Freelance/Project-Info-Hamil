@@ -2,14 +2,11 @@ package com.onepage.infohamil;
 
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.net.Uri;
-import android.support.annotation.IntegerRes;
-import android.support.v4.app.NotificationCompat;
+import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,13 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.net.URI;
-import java.util.ArrayList;
-
-import static com.onepage.infohamil.R.id.info;
-import static com.onepage.infohamil.R.id.lvMainMenu;
-import static com.onepage.infohamil.R.id.lvSettingMenu;
 
 // TODO: 4/5/2017 - update UI
 public class InfoMingguHamil extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
@@ -116,9 +106,9 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
                         "Info Bayi:\n" + descBayi + "\n\n" +
                         "-- From Info Hamil (Test) --";
 
-                shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
+                shareIntent.setAction(Intent.ACTION_SEND);
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareContent);
-                shareIntent.setType("text/*");
+                shareIntent.setType("text/plain");
 
                 startActivity(Intent.createChooser(shareIntent, "Share info to..."));
             }
@@ -170,7 +160,6 @@ public class InfoMingguHamil extends AppCompatActivity implements AdapterView.On
         }
     }
 
-    // TODO: 4/5/2017 - implement '->' link & '<-' link
     @Override
     public void onClick(View v) {
         Intent otherAct;
