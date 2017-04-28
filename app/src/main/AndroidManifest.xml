@@ -20,7 +20,8 @@
         <activity android:name=".InfoMingguHamil" />
         <activity android:name=".TipsPenjagaanIbu" />
         <activity android:name=".TipsPenjagaanBayi" />
-        <activity android:name=".TandaHamil"></activity>
+        <activity android:name=".TandaHamil" />
+        <activity android:name=".SenaraiHospital"></activity>
     </application>
 
 </manifest>

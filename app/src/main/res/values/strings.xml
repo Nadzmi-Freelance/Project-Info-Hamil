@@ -28,6 +28,9 @@
         <item>Tips Penjagaan Ibu Hamil</item>
         <item>Tips Penjagaan Bayi</item>
         <item>Senarai Hospital Bersalin</item>
+        <item>Klinik Kanak-Kanak</item>
+        <item>Produk Bayi &amp; Kanak-Kanak</item>
+        <item>Taska &amp; Nurseri Berdaftar JKM</item>
     </string-array>
 
     <string-array name="menu_setting">
@@ -127,6 +130,23 @@
         <item>Tanda 8</item>
         <item>Tanda 9</item>
         <item>Tanda 10</item>
+    </string-array>
+
+    <string-array name="menu_senarai_negeri">
+        <item>Sarawak</item>
+        <item>Sabah</item>
+        <item>Pahang</item>
+        <item>Perak</item>
+        <item>Johor</item>
+        <item>Kelantan</item>
+        <item>Terengganu</item>
+        <item>Kedah</item>
+        <item>Selangor</item>
+        <item>Negeri Sembilan</item>
+        <item>Melaka</item>
+        <item>Pulau Pinang</item>
+        <item>Perlis</item>
+        <item>Kuala Lumpur</item>
     </string-array>
 
     <!-- desc -->
